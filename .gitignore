@@ -1,0 +1,16 @@
+composer.lock
+
+runtime/*
+
+public/docs
+
+public/uploads
+
+gitc
+
+vendor
+
+.idea/
+.env
+
+.DS_Store
