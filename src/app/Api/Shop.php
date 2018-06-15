@@ -40,6 +40,8 @@ class Shop extends BaseApi {
         'shop_name' => 'shop_name|string|false||店铺名称',
         'shop_code' => 'shop_code|string|false||店铺编码',
         'phone' => 'phone|string|true||店铺电话',
+        'ext_1' => 'ext_1|int|false||最小额度',
+        'ext_2' => 'ext_2|int|false||最大额度',
         'open_time' => 'open_time|string|true||店铺营业时间 ',
         'words' => 'words|string|true||一句话介绍',
         'thumbnail' => 'thumbnail|string|false||店铺logo',
