@@ -26,6 +26,12 @@ class Merchant extends BaseApi {
       
       ],
 
+      'getDetail' => [
+      
+        'id' => 'id|int|true||银行id'
+      
+      ],
+
       'updateMerchant' => [
       
         'id' => 'id|int|ture||银行id',
@@ -134,6 +140,18 @@ class Merchant extends BaseApi {
   public function updateMerchant() {
   
     return $this->dm->updateMerchant($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 查询银行详细信息
+   * @desc 查询银行详细信息
+   *
+   * @return array data
+   */
+  public function getDetail() {
+  
+    return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__));
   
   }
 
