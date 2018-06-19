@@ -33,4 +33,10 @@ class MerchantDm {
   
   }
 
+  public function updateMerchant($data) {
+
+    return \App\request('App.Merchant.UpdateMerchant', $data); 
+  
+  }
+
 }
