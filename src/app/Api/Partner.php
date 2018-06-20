@@ -28,13 +28,13 @@ class Partner extends BaseApi {
 
       'accept' => [
       
-        'member_id' => 'member_id|int|true||会员id', 
+        'id' => 'id|int|true||会员id', 
 
       ],
 
       'reject' => [
       
-        'member_id' => 'member_id|int|false||会员id',
+        'id' => 'id|int|false||会员id',
       
       ]
     
