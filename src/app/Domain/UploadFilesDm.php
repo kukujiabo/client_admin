@@ -5,7 +5,17 @@ class UploadFilesDm {
 
   public function upload($data) {
   
-    return $data;
+    $newData = [
+    
+      'bank_id' => $data['bank_id'],
+    
+      'file_path' => $_FILES['tmp_name'],
+
+      'orig_name' => $_FILES['name']
+    
+    ];
+
+    return \App\request('App.BankData.Reconciliation', $newData);
   
   }
 
