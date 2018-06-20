@@ -3,7 +3,7 @@ namespace App\Domain;
 
 class UploadFilesDm {
 
-  public function update($data) {
+  public function upload($data) {
   
     return $data;
   
