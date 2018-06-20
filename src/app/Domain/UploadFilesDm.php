@@ -9,9 +9,9 @@ class UploadFilesDm {
     
       'bank_id' => $data['bank_id'],
     
-      'file_path' => $_FILES['tmp_name'],
+      'file_path' => $_FILES['upfile']['tmp_name'],
 
-      'orig_name' => $_FILES['name']
+      'orig_name' => $_FILES['upfile']['name']
     
     ];
 
