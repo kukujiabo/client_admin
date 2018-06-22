@@ -11,11 +11,7 @@ class PartnerDm {
 
   public function accept($data) {
 
-    $data['state'] = 1;
-
-    $data['confirm_at'] = date('Y-m-d H:i:s');
-
-    return \App\request('App.AgentApply.Edit', $data);
+    return \App\request('App.AgentApply.Accept', $data);
   
   }
 
