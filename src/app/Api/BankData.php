@@ -32,6 +32,13 @@ class BankData extends BaseApi {
       
         'id' => 'id|int|true||文件id'
       
+      ],
+
+      'balanceOfAccount' => [
+      
+        'sequence' => 'sequence|string|true||流水号',
+        'bank_id' => 'bank_id|int|true||银行id'
+      
       ]
     
     ]);
@@ -59,6 +66,18 @@ class BankData extends BaseApi {
   public function importData() {
   
     return $this->dm->importData($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 按文件对账
+   * @desc 按文件对账
+   *
+   * @return array data
+   */
+  public function balanceOfAccount() {
+  
+    return $this->dm->balanceOfAccount($this->retriveRuleParams(__FUNCTION__));
   
   }
 

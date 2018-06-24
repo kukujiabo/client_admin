@@ -15,4 +15,10 @@ class BankDataDm {
   
   }
 
+  public function balanceOfAccount($data) {
+  
+    return \App\request('App.AuditCard.BalanceOfAccount', $data); 
+
+  }
+
 }
