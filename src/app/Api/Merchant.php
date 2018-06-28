@@ -120,8 +120,8 @@ class Merchant extends BaseApi {
   }
 
   /**
-   * 银行申请列表
-   * @desc 银行申请列表
+   * 银行信用卡申请列表
+   * @desc 银行信用卡申请列表
    *
    * @return array list
    */
