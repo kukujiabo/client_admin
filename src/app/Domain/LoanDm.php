@@ -9,4 +9,19 @@ class LoanDm {
   
   }
 
+  /**
+   * 查询列表
+   */
+  public function listQuery($data) {
+  
+    return \App\request('App.Reward.ListQuery', $data);
+  
+  }
+
+  public function getAll($data) {
+  
+    return \App\request('App.Reward.GetAll', $data);
+  
+  }
+
 }
