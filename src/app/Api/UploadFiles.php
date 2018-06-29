@@ -40,7 +40,7 @@ class UploadFiles extends BaseApi {
           'range' => [ 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.ms-excel' ],
           'ext' => [ 'xlsx', 'xls' ]
         
-        ]
+        ],
       
         'loan_id'  => 'loan_id|int|true||贷款'
 
