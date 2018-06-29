@@ -19,4 +19,20 @@ class UploadFilesDm {
   
   }
 
+  public function loanData($data) {
+  
+    $newData = [
+    
+      'loan_id' => $data['loan_id'],
+
+      'file_path' => $_FILES['upfile']['tmp_name'],
+
+      'orig_name' => $_FILES['upfile']['name']
+    
+    ];
+  
+    return \App\request('App.LoanData.Reconciliation', $newData);
+
+  }
+
 }
