@@ -5,7 +5,7 @@ class LoanDataDm {
 
   public function dataFileList($data) {
   
-    return request('App.LoanData.GetList', $data);  
+    return \App\request('App.LoanData.GetList', $data);  
   
   }
 
