@@ -44,7 +44,7 @@ class LoanRewardRule extends BaseApi {
    */
   public function create() {
   
-    return $this->dm->addRule($this->retriveRuleParams(__FUNCTION__)); 
+    return $this->dm->create($this->retriveRuleParams(__FUNCTION__)); 
   
   }
 
