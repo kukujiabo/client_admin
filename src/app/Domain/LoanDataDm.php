@@ -9,4 +9,10 @@ class LoanDataDm {
   
   }
 
+  public function importData($data) {
+  
+    return \App\request('App.LoanData.importData', $data);
+  
+  }
+
 }

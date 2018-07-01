@@ -20,7 +20,13 @@ class LoanData extends BaseApi {
         'fields' => 'fields|string|false||字段',
         'order' => 'order|string|false||排序'
       
-      ]    
+      ],
+
+      'importData' => [
+      
+        'id' => 'id|int|true||文件id'
+      
+      ]
     
     ]); 
   
@@ -35,6 +41,18 @@ class LoanData extends BaseApi {
   public function dataFileList() {
   
     return $this->dm->dataFileList($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 导入文件数据
+   * @desc 导入文件数据
+   *
+   * @return int num
+   */
+  public function importData() {
+  
+    return $this->dm->importData($this->retriveRuleParams(__FUNCTION__));
   
   }
 
