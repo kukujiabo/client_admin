@@ -5,15 +5,15 @@ class LoanRewardRuleDm {
 
   public function create($data) {
 
-    $params['member_id'] = 0;
+    $data['member_id'] = 0;
   
-    return \App\request('App.LoanRewardRule.Create', $params);
+    return \App\request('App.LoanRewardRule.Create', $data);
   
   }
 
   public function getList($data) {
   
-    return \App\request('App.LoanRewardRule.GetList', $params);
+    return \App\request('App.LoanRewardRule.GetList', $data);
   
   }
 
