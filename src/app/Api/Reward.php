@@ -34,7 +34,8 @@ class Reward extends BaseApi {
         'end_time' => 'end_time|string|false||赠品有效期结束',
         'is_self' => 'is_self|int|false||是否自营',
         'display_order' => 'display_order|int|false||排序',
-        'reward_type' => 'reward_type|int|false||贷款佣金类型'
+        'reward_type' => 'reward_type|int|false||贷款佣金类型',
+        'third_id' => 'third_id|int|false||外部id'
       
       ],
 
@@ -62,8 +63,8 @@ class Reward extends BaseApi {
         'end_time' => 'end_time|string|false||赠品有效期结束',
         'is_self' => 'is_self|int|false||是否自营',
         'display_order' => 'display_order|int|false||排序',
-        'reward_type' => 'reward_type|int|false||贷款佣金类型'
-
+        'reward_type' => 'reward_type|int|false||贷款佣金类型',
+        'third_id' => 'third_id|int|false||外部id'
       ],
 
       'listQuery' => [
