@@ -15,4 +15,10 @@ class LoanDataDm {
   
   }
 
+  public function balanceOfAccount($data) {
+  
+    return \App\request('App.LoanData.balanceOfAccount', $data);
+  
+  }
+
 }
