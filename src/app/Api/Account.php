@@ -34,5 +34,16 @@ class Account extends BaseApi {
   
   }
 
+  /**
+   * 贷款佣金结算
+   * @desc 贷款佣金结算
+   *
+   * @return int num
+   */
+  public function balanceLoanMoney() {
+  
+    return $this->dm->balanceLoanMoney($this->retriveRuleParams(__FUNCTION__));
+  
+  }
 
 }

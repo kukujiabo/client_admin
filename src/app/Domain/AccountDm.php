@@ -9,4 +9,10 @@ class AccountDm {
   
   }
 
+  public function balanceLoanMoney($data) {
+  
+    return \App\request('App.BusinessApply.BalanceLoanMoney', $data);
+  
+  }
+
 }
