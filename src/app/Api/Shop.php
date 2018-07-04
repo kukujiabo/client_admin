@@ -24,6 +24,7 @@ class Shop extends BaseApi {
         'ext_1' => 'ext_1|int|false||最小额度',
         'ext_2' => 'ext_2|int|false||最大额度',
         'brief' => 'brief|string|false||店铺简介',
+        'account_date' => 'account_date|int|false||结算周期',
         'image_text' => 'image_text|string|false||店铺照片',
         'carousel' => 'carousel|string|false||店铺轮播图',
         'commission' => 'commission|string|false||佣金',
@@ -45,6 +46,7 @@ class Shop extends BaseApi {
         'open_time' => 'open_time|string|true||店铺营业时间 ',
         'words' => 'words|string|true||一句话介绍',
         'thumbnail' => 'thumbnail|string|false||店铺logo',
+        'account_date' => 'account_date|int|false||结算周期',
         'brief' => 'brief|string|false||店铺简介',
         'image_text' => 'image_text|string|false||店铺照片',
         'carousel' => 'carousel|string|false||店铺轮播图',
@@ -61,11 +63,10 @@ class Shop extends BaseApi {
         'status' => 'status|int|false||店铺状态',
         'fields' => 'fields|string|false||店铺字段',
         'order' => 'order|string|false||列表排序',
-        'page' => 'page||||',
-        'page_size' => 'page_size||||'
+        'page' => 'page|int|false|1|页码',
+        'page_size' => 'page_size|int|false|20|每页条数'
       
       ],
-
 
       'getAll' => [
       
@@ -151,5 +152,6 @@ class Shop extends BaseApi {
     return $this->dm->getAll($params);
   
   }
+
 
 }
