@@ -35,6 +35,7 @@ class Reward extends BaseApi {
         'is_self' => 'is_self|int|false||是否自营',
         'display_order' => 'display_order|int|false||排序',
         'reward_type' => 'reward_type|int|false||贷款佣金类型',
+        'account_date' => 'account_date|int|false||结算周期',
         'third_id' => 'third_id|int|false||外部id',
         'audit_type' => 'audit_type|int|false||结算类型'
       
@@ -46,6 +47,7 @@ class Reward extends BaseApi {
         'reward_name' => 'reward_name|string|false||赠品名称',
         'reward_code' => 'reward_code|string|false||赠品编码',
         'check_code' => 'check_code|string|false||核销码',
+        'account_date' => 'account_date|int|false||结算周期',
         'url' => 'url|string|true||办理链接',
         'rate' => 'rate|string|true||利率',
         'min_credit' => 'min_credit|int|false||最小额度',
