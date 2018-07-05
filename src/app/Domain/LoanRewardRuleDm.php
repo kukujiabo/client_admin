@@ -23,4 +23,10 @@ class LoanRewardRuleDm {
   
   }
 
+  public function updateRule($data) {
+  
+    return \App\request('App.LoanRewardRule.UpdateRule', $data); 
+  
+  }
+
 }

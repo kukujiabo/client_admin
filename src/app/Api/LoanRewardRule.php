@@ -36,6 +36,16 @@ class LoanRewardRule extends BaseApi {
       
         'id' => 'id|int|true||获取规则详情'
       
+      ],
+
+      'updateRule' => [
+      
+        'id' => 'id|int|true||规则id',
+        'senior_reward' => 'senior_reward|float|false||一级代理佣金',
+        'sub_reward' => 'sub_reward|float|false||二级代理佣金',
+        'remark' => 'remark|string|false||备注',
+        'state' => 'state|int|false||状态'
+      
       ]
     
     ]); 
@@ -75,6 +85,18 @@ class LoanRewardRule extends BaseApi {
   public function getRuleDetail() {
   
     return $this->dm->getRuleDetail($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 更新规则
+   * @desc 更新规则
+   *
+   * @return int num
+   */
+  public function updateRule() {
+  
+    return $this->dm->updateRule($this->retriveRuleParams(__FUNCTION__));
   
   }
 
