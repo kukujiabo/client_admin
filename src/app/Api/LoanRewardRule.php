@@ -30,6 +30,12 @@ class LoanRewardRule extends BaseApi {
         'page' => 'page|int|false|1|页码',
         'page_size' => 'page_size|int|false|20|每页条数'
       
+      ],
+
+      'getRuleDetail' => [
+      
+        'id' => 'id|int|true||获取规则详情'
+      
       ]
     
     ]); 
@@ -57,6 +63,18 @@ class LoanRewardRule extends BaseApi {
   public function getList() {
   
     return $this->dm->getList($this->retriveRuleParams(__FUNCTION__)); 
+  
+  }
+
+  /**
+   * 获取贷款详情
+   * @desc 获取贷款详情
+   *
+   * @return array list
+   */
+  public function getRuleDetail() {
+  
+    return $this->dm->getRuleDetail($this->retriveRuleParams(__FUNCTION__));
   
   }
 

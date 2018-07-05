@@ -17,4 +17,10 @@ class LoanRewardRuleDm {
   
   }
 
+  public function getRuleDetail($data) {
+  
+    return \App\request('App.LoanRewardRule.GetRuleDetail', $data);
+  
+  }
+
 }
