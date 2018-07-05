@@ -21,4 +21,10 @@ class AccountDm {
   
   }
 
+  public function getList() {
+  
+    return \App\request('App.Account.GetList', $data);
+  
+  }
+
 }

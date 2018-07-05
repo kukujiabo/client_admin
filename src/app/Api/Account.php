@@ -24,8 +24,19 @@ class Account extends BaseApi {
         'relat_id' => 'relat_id|int|false||关联id',
         'relat_type' => 'relat_type|int|false||关联类型',
         'change_type' => 'change_type|int|false||变更类型',
-        'fields' => 'fields|string|false||变更类型',
-        'order' => 'order|string|false||变更类型',
+        'fields' => 'fields|string|false||字段',
+        'order' => 'order|string|false||排序',
+        'page' => 'page|int|false||页码',
+        'page_size' => 'page_size|int|false||每页条数'
+      
+      ],
+
+      'getList' => [
+      
+        'member_name' => 'member_name|string|false||会员名称',
+        'member_type' => 'member_type|int|false||会员等级',
+        'fields' => 'fields|string|false||字段',
+        'order' => 'order|string|false||排序',
         'page' => 'page|int|false||页码',
         'page_size' => 'page_size|int|false||每页条数'
       
@@ -68,6 +79,18 @@ class Account extends BaseApi {
   public function getAccountDetailLog() {
   
     return $this->dm->getAccountDetailLog($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 查询列表
+   * @desc 查询列表
+   *
+   * @return array list
+   */
+  public function getList() {
+  
+    return $this->dm->getList($this->retriveRuleParams(__FUNCTION__));
   
   }
 
