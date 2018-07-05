@@ -15,4 +15,10 @@ class AccountDm {
   
   }
 
+  public function getAccountDetailLog($data) {
+  
+    return \App\request('App.AccoutLog.getUnionLogInfoList', $data);
+  
+  }
+
 }
