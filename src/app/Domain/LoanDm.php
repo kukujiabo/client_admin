@@ -24,4 +24,10 @@ class LoanDm {
   
   }
 
+  public function getLoanCommissionList($data) {
+  
+    return \App\request('App.Reward.LoanCommisionList', $data);
+  
+  }
+
 }

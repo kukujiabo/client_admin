@@ -34,6 +34,16 @@ class Loan extends BaseApi {
         'page' => 'page|int|false||页码',
         'page_size' => 'page_size|int|false||每页条数'
       
+      ],
+
+      'getLoanCommissionList' => [
+      
+        'reward_name' => 'reward_name|string|false||贷款名称',
+        'fields' => 'fields|string|false||查询字段',
+        'order' => 'order|string|false||排序',
+        'page' => 'page|int|false||页码',
+        'page_size' => 'page_size|int|false||每页条数'
+      
       ]
     
     ]);
@@ -61,6 +71,18 @@ class Loan extends BaseApi {
   public function getAll() {
   
     return $this->dm->getAll($this->retriveRuleParams(__FUNCTION__)); 
+  
+  }
+
+  /**
+   * 获取贷款列表
+   * @desc 获取贷款列表
+   *
+   * @return array list
+   */
+  public function getLoanCommissionList() {
+  
+    return $this->dm->getLoanCommissionList($this->retriveRuleParams(__FUNCTION__)); 
   
   }
 
