@@ -20,7 +20,7 @@ class Account extends BaseApi {
 
       'getAccountDetailLog' => [
       
-        'member_id' => 'member_id|int|true||会员id',
+        'member_id' => 'member_id|int|false||会员id',
         'relat_id' => 'relat_id|int|false||关联id',
         'relat_type' => 'relat_type|int|false||关联类型',
         'change_type' => 'change_type|int|false||变更类型',
