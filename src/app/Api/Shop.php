@@ -2,7 +2,7 @@
 namespace App\Api;
 
 /**
- * 店铺相关接口
+ * 信用卡相关接口
  *
  * @author Meroc Chen <398515393@qq.com> 2018-06-04
  */
@@ -15,22 +15,23 @@ class Shop extends BaseApi {
       'create' => [
       
         'mid' => 'mid|int|true||商户id',
-        'shop_name' => 'shop_name|string|true||店铺名称',
-        'shop_code' => 'shop_code|string|true||店铺编码',
-        'phone' => 'phone|string|false||店铺电话',
-        'open_time' => 'open_time|string|false||店铺营业时间 ',
-        'thumbnail' => 'thumbnail|string|false||店铺logo',
+        'shop_name' => 'shop_name|string|true||信用卡名称',
+        'shop_code' => 'shop_code|string|true||信用卡编码',
+        'phone' => 'phone|string|false||信用卡电话',
+        'open_time' => 'open_time|string|false||信用卡营业时间 ',
+        'thumbnail' => 'thumbnail|string|false||信用卡logo',
         'words' => 'words|string|true||一句话介绍',
         'ext_1' => 'ext_1|int|false||最小额度',
         'ext_2' => 'ext_2|int|false||最大额度',
-        'brief' => 'brief|string|false||店铺简介',
+        'brief' => 'brief|string|false||信用卡简介',
         'account_date' => 'account_date|int|false||结算周期',
-        'image_text' => 'image_text|string|false||店铺照片',
-        'carousel' => 'carousel|string|false||店铺轮播图',
+        'image_text' => 'image_text|string|false||信用卡照片',
+        'carousel' => 'carousel|string|false||信用卡轮播图',
         'commission' => 'commission|string|false||佣金',
         'latitue' => 'latitude|string|false||纬度',
+        'display_order' => 'display_order|int|false||排序',
         'longtitude' => 'longtitude|string|false||经度',
-        'status' => 'status|int|false|1|店铺状态：1.有效，2.停用'
+        'status' => 'status|int|false|1|信用卡状态：1.有效，2.停用'
       
       ],
 
@@ -38,30 +39,31 @@ class Shop extends BaseApi {
       
         'id' => 'id|int|true||门店id',
         'mid' => 'mid|int|false||商户id',
-        'shop_name' => 'shop_name|string|false||店铺名称',
-        'shop_code' => 'shop_code|string|false||店铺编码',
-        'phone' => 'phone|string|true||店铺电话',
+        'shop_name' => 'shop_name|string|false||信用卡名称',
+        'shop_code' => 'shop_code|string|false||信用卡编码',
+        'phone' => 'phone|string|true||信用卡电话',
         'ext_1' => 'ext_1|int|false||最小额度',
         'ext_2' => 'ext_2|int|false||最大额度',
-        'open_time' => 'open_time|string|true||店铺营业时间 ',
+        'open_time' => 'open_time|string|true||信用卡营业时间 ',
         'words' => 'words|string|true||一句话介绍',
-        'thumbnail' => 'thumbnail|string|false||店铺logo',
+        'thumbnail' => 'thumbnail|string|false||信用卡logo',
         'account_date' => 'account_date|int|false||结算周期',
-        'brief' => 'brief|string|false||店铺简介',
-        'image_text' => 'image_text|string|false||店铺照片',
-        'carousel' => 'carousel|string|false||店铺轮播图',
+        'brief' => 'brief|string|false||信用卡简介',
+        'image_text' => 'image_text|string|false||信用卡照片',
+        'carousel' => 'carousel|string|false||信用卡轮播图',
         'commission' => 'commission|string|false||佣金',
-        'status' => 'status|int|false|1|店铺状态：1.有效，2.停用'
+        'display_order' => 'display_order|int|false||排序',
+        'status' => 'status|int|false|1|信用卡状态：1.有效，2.停用'
       
       ],
 
       'listQuery' => [
       
         'mid' => 'mid|int|false||商户id',
-        'shop_name' => 'shop_name|string|false||店铺名称',
-        'shop_code' => 'shop_code|string|false||店铺编码',
-        'status' => 'status|int|false||店铺状态',
-        'fields' => 'fields|string|false||店铺字段',
+        'shop_name' => 'shop_name|string|false||信用卡名称',
+        'shop_code' => 'shop_code|string|false||信用卡编码',
+        'status' => 'status|int|false||信用卡状态',
+        'fields' => 'fields|string|false||信用卡字段',
         'order' => 'order|string|false||列表排序',
         'page' => 'page|int|false|1|页码',
         'page_size' => 'page_size|int|false|20|每页条数'
@@ -71,10 +73,10 @@ class Shop extends BaseApi {
       'getAll' => [
       
         'mid' => 'mid|int|false||商户id',
-        'shop_name' => 'shop_name|string|false||店铺名称',
-        'shop_code' => 'shop_code|string|false||店铺编码',
-        'status' => 'status|int|false||店铺状态',
-        'fields' => 'fields|string|false||店铺字段',
+        'shop_name' => 'shop_name|string|false||信用卡名称',
+        'shop_code' => 'shop_code|string|false||信用卡编码',
+        'status' => 'status|int|false||信用卡状态',
+        'fields' => 'fields|string|false||信用卡字段',
         'order' => 'order|string|false||列表排序'
       
       ],
