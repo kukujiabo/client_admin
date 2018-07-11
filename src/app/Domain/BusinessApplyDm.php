@@ -3,25 +3,25 @@ namespace App\Domain;
 
 class BusinessApplyDm {
 
-  public function creditAuditPass() {
+  public function creditAuditPass($data) {
   
     return \App\request('App.BusinessApply.AuditPass', $data); 
   
   }
 
-  public function creditAuditFail() {
+  public function creditAuditFail($data) {
   
     return \App\request('App.BusinessApply.AuditFail', $data); 
   
   }
 
-  public function loanAuditPass() {
+  public function loanAuditPass($data) {
   
     return \App\request('App.BusinessApply.AuditPass', $data);
   
   }
 
-  public function loanAuditFail() {
+  public function loanAuditFail($data) {
   
     return \App\request('App.BusinessApply.AuditFail', $data);
   
