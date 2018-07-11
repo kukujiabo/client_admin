@@ -5,25 +5,25 @@ class BusinessApplyDm {
 
   public function creditAuditPass() {
   
-    return \App\request('App.BusinessApply.CreditAuditPass', $data); 
+    return \App\request('App.BusinessApply.AuditPass', $data); 
   
   }
 
   public function creditAuditFail() {
   
-    return \App\request('App.BusinessApply.CreditAuditFail', $data); 
+    return \App\request('App.BusinessApply.AuditFail', $data); 
   
   }
 
   public function loanAuditPass() {
   
-    return \App\request('App.BusinessApply.LoanAuditPass', $data);
+    return \App\request('App.BusinessApply.AuditPass', $data);
   
   }
 
   public function loanAuditFail() {
   
-    return \App\request('App.BusinessApply.LoanAuditFail', $data);
+    return \App\request('App.BusinessApply.AuditFail', $data);
   
   }
 
