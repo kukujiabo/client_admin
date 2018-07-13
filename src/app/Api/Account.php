@@ -34,6 +34,8 @@ class Account extends BaseApi {
       'getList' => [
       
         'member_name' => 'member_name|string|false||会员名称',
+        'alipay_account' => 'alipay_account|string|false||支付宝账户',
+        'alipay_realname' => 'alipay_realname|string|false||支付宝实名',
         'member_type' => 'member_type|int|false||会员等级',
         'fields' => 'fields|string|false||字段',
         'order' => 'order|string|false||排序',
