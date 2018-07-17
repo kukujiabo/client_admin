@@ -16,6 +16,7 @@ class Loan extends BaseApi {
       
         'name' => 'name|string|false||银行名称',
         'contact' => 'contact|string|false||联系人姓名',
+        'loan_name' => 'loan_name|string|false||贷款名称',
         'phone' => 'phone|string|false||联系人电话',
         'fields' => 'fields|string|false||银行字段',
         'order' => 'order|string|false||排序', 
