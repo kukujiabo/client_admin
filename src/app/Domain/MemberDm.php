@@ -9,4 +9,10 @@ class MemberDm {
   
   }
 
+  public function setVip($params) {
+  
+    return \App\request('App.Member.SetVip', $params);
+  
+  }
+
 }

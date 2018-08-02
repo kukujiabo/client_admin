@@ -20,8 +20,13 @@ class Member extends BaseApi {
         'page' => 'page|int|false||页码',
         'page_size' => 'member_name|string|false||每页条数'
       
+      ],
+
+      'setVip' => [
+      
+        'member_id' => 'member_id|int|true||会员id'
+      
       ]
-    
     
     ]);
   
@@ -37,6 +42,18 @@ class Member extends BaseApi {
   
     return $this->dm->listQuery($this->retriveRuleParams(__FUNCTION__));
 
+  }
+
+  /**
+   * 设置vip
+   * @desc 设置vip
+   *
+   * @return int num
+   */
+  public function setVip() {
+  
+    return $this->dm->setVip($this->retriveRuleParams(__FUNCTION__));
+  
   }
 
 }
