@@ -15,4 +15,10 @@ class PosMechineDm {
   
   }
 
+  public function remove($data) {
+  
+    return \App\request('App.PosMechine.Remove', $data);
+  
+  }
+
 }
