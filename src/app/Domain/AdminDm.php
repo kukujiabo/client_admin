@@ -30,7 +30,7 @@ class AdminDm extends BaseDm {
     
     ];
   
-    return \App\request('App.Admin.sessionAdminInfo', $params);
+    return \App\request('App.Admin.SessionAdminInfo', $params);
   
   }
 
