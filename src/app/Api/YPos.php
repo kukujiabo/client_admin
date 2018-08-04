@@ -22,7 +22,13 @@ class YPos extends BaseApi {
 
         'page_size' => 'page_size|int|false|20|每页条数'
       
-      ] 
+      ],
+
+      'sendPos' => [
+      
+        'id' => 'id|int|true||pos机申请id'
+      
+      ]
     
     ]);
   
@@ -37,6 +43,18 @@ class YPos extends BaseApi {
   public function getList() {
   
     return $this->dm->getList($this->retriveRuleParams(__FUNCTION__)); 
+  
+  }
+
+  /**
+   * POS机发货
+   * @desc POS机发货
+   *
+   * @return 
+   */
+  public function sendPos() {
+  
+    return $this->dm->sendPos($this->retriveRuleParams(__FUNCTION__));
   
   }
 

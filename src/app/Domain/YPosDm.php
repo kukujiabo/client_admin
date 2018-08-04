@@ -9,4 +9,10 @@ class YPosDm {
   
   }
 
+  public function sendPos() {
+  
+    return \App\request('App.YPos.SendPos', $params);
+  
+  }
+
 }
