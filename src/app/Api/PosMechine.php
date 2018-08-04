@@ -9,7 +9,7 @@ class PosMechine extends BaseApi {
 
   public function getRules() {
   
-    return $this->dm->rules([
+    return $this->rules([
     
       'create' => [
       
