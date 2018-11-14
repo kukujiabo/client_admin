@@ -8,6 +8,8 @@ class UploadFilesDm {
     $newData = [
     
       'bank_id' => $data['bank_id'],
+
+      'channel_id' => $data['channel_id'],
     
       'file_path' => $_FILES['upfile']['tmp_name'],
 
