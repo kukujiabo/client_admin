@@ -40,4 +40,10 @@ class AdminDm extends BaseDm {
   
   }
 
+  public function getAllChannel($data) {
+  
+    return \App\request('App.Admin.GetAllChannel', $data);
+  
+  }
+
 }

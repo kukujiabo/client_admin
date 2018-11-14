@@ -36,6 +36,11 @@ class Admin extends BaseApi {
 
         'city_code' => 'city_code|string|true||后台管理员令牌'
       
+      ],
+
+      'getAllChannel' => [
+      
+      
       ]
     
     ]);
@@ -66,9 +71,27 @@ class Admin extends BaseApi {
   
   }
 
+  /**
+   * 新增管理员
+   * @desc 新增管理员
+   *
+   * @return array info
+   */
   public function addAcct() {
   
     return $this->dm->addAcct($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 查询全部渠道账号
+   * @desc 查询全部渠道账号
+   *
+   * @return array data
+   */
+  public function getAllChannel() {
+  
+    return $this->dm->getAllChannel($this->retriveRuleParams(__FUNCTION__));
   
   }
 
