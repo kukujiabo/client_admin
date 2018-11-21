@@ -43,6 +43,17 @@ class BankData extends BaseApi {
         'sequence' => 'sequence|string|true||流水号',
         'bank_id' => 'bank_id|int|true||银行id'
       
+      ],
+
+      'create' => [
+      
+        'bank_id' => 'bank_id|int|true||银行id',
+        'channel_id' => 'channel_id|int|true||渠道id',
+        'commission' => 'commission|float|true||结算金额',
+        'success_num' => 'success_num|int|true||核卡数量',
+        'import_num' => 'import_num|int|true||进件数量',
+        'bus_date' => 'bus_date|string|true||进件日期'
+      
       ]
     
     ]);
@@ -82,6 +93,18 @@ class BankData extends BaseApi {
   public function balanceOfAccount() {
   
     return $this->dm->balanceOfAccount($this->retriveRuleParams(__FUNCTION__));
+  
+  }
+
+  /**
+   * 手动新增记录
+   * @desc 手动新增记录
+   *
+   * @return int id
+   */
+  public function create() {
+  
+    return $this->dm->create($this->retriveRuleParams(__FUNCTION__));
   
   }
 

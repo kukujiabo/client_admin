@@ -21,4 +21,10 @@ class BankDataDm {
 
   }
 
+  public function create($data) {
+  
+    return \App\request('App.BankData.Create', $data);
+  
+  }
+
 }
