@@ -22,6 +22,7 @@ class Merchant extends BaseApi {
         'phone' => 'phone|string|false||银行手机号',
         'image_text' => 'image_text|string|false||商家图文详情',
         'carousel' => 'carousel|string|false||商家轮播图',
+        'single_price' => 'single_price|int|false||核卡单价',
         'status' => 'status|int|false|1|银行状态'
       
       ],
