@@ -23,7 +23,7 @@ class ChannelCode extends BaseApi {
       'getList' => [
       
         'channel_id' => 'channel_id|int|true||渠道id',
-        'bank_id' => 'bank_id|int|true||银行id',
+        'bank_id' => 'bank_id|int|false||银行id',
         'page' => 'page|int|false|1|页码',
         'page_size' => 'page_size|int|false|20|每页条数'
       
