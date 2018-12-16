@@ -36,7 +36,7 @@ class AdminDm extends BaseDm {
 
   public function addAcct($data) {
   
-    return \App\request('App.UserAdmin.AddAcct', $data);
+    return \App\request('App.Admin.AddAcct', $data);
   
   }
 
