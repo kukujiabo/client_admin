@@ -26,15 +26,9 @@ class Admin extends BaseApi {
 
       'addAcct' => [
       
-        'token' => 'token|string|true||后台管理员令牌',
-      
-        'account' => 'token|string|true||后台管理员令牌',
-      
-        'password' => 'password|string|true||后台管理员令牌',
+        'account' => 'account|string|true||账号',
 
-        'auth' => 'auth|string|true||后台管理员令牌',
-
-        'city_code' => 'city_code|string|true||后台管理员令牌'
+        'password' => 'password|string|true||密码'
       
       ],
 
