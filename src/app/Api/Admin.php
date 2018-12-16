@@ -34,7 +34,7 @@ class Admin extends BaseApi {
 
       'getChannelList' => [
       
-        'keywords' => 'keywords|string|true||关键字',
+        'keywords' => 'keywords|string|false||关键字',
 
         'page' => 'page|int|false|1|页码',
 
