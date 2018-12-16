@@ -5,7 +5,7 @@ namespace App\Api;
  * 渠道码接口
  *
  */
-class ChannelCode extends Base Api {
+class ChannelCode extends BaseApi {
 
   public function getRules() {
   
@@ -16,7 +16,7 @@ class ChannelCode extends Base Api {
         'channel_id' => 'channel_id|int|true||渠道id',
         'bank_id' => 'bank_id|int|true||银行id',
         'channel_code' => 'channel_code|string|true||渠道码',
-        'price' => 'price|float|true||单价',
+        'price' => 'price|float|true||单价'
       
       ],
 
