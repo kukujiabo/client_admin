@@ -46,4 +46,10 @@ class AdminDm extends BaseDm {
   
   }
 
+  public function getChannelList($data) {
+  
+    return \App\request('App.Admin.GetChannelList', $data);
+  
+  }
+
 }
