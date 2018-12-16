@@ -42,6 +42,12 @@ class Admin extends BaseApi {
       
       ],
 
+      'remove' => [
+      
+        'id' => 'id|int|true||账号id'
+      
+      ],
+
       'getAllChannel' => [
       
       
@@ -108,6 +114,18 @@ class Admin extends BaseApi {
   public function getChannelList() {
   
     return $this->dm->getChannelList($this->retriveRuleParams(__FUNCTION__)); 
+  
+  }
+
+  /**
+   * 删除管理员账号
+   * @desc 删除管理员账号
+   *
+   * @return int num
+   */
+  public function remove() {
+  
+    return $this->dm->remove($this->retriveRuleParams(__FUNCTION__)); 
   
   }
 

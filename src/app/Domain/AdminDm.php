@@ -52,4 +52,10 @@ class AdminDm extends BaseDm {
   
   }
 
+  public function remove($data) {
+  
+    return \App\request('App.Admin.Remove', $data);
+  
+  }
+
 }
