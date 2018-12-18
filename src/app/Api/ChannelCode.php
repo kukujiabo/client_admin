@@ -86,4 +86,16 @@ class ChannelCode extends BaseApi {
   
   }
 
+  /**
+   * 编辑渠道码
+   * @desc 编辑渠道码
+   *
+   * @return int num
+   */
+  public function edit() {
+  
+    return $this->dm->edit($this->retriveRuleParams(__FUNCTION__)); 
+  
+  }
+
 }
