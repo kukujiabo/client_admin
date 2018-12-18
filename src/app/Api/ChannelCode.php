@@ -29,6 +29,16 @@ class ChannelCode extends BaseApi {
       
       ],
 
+      'Edit' => [
+      
+        'id' => 'id|int|true||渠道id',
+        'channel_id' => 'channel_id|int|false||渠道id',
+        'bank_id' => 'bank_id|int|false||银行id',
+        'channel_code' => 'channel_code|string|false||渠道码',
+        'price' => 'price|float|false||单价'
+      
+      ],
+
       'remove' => [
       
         'id' => 'id|int|true||渠道id'

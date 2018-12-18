@@ -21,5 +21,10 @@ class ChannelCodeDm {
   
   }
 
+  public function edit($data) {
+  
+    return \App\request('App.ChannelCode.Edit', $data);
+  
+  }
 
 }
