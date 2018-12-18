@@ -29,7 +29,7 @@ class ChannelCode extends BaseApi {
       
       ],
 
-      'Edit' => [
+      'edit' => [
       
         'id' => 'id|int|true||渠道id',
         'channel_id' => 'channel_id|int|false||渠道id',
