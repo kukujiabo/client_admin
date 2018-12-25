@@ -20,7 +20,7 @@ class AuditCard extends BaseApi {
         'order' => 'order|string|false||排序',
         'fields' => 'fields|string|false||字段',
         'begin_date' => 'begin_date|string|false||开始时间',
-        'end_date' => 'end_date|string|false||结束时间'
+        'end_date' => 'end_date|string|false||结束时间',
         'page' => 'page|int|false||页码',
         'page_size' => 'page_size|int|false|50|每页条数'
       
