@@ -1,6 +1,9 @@
 <?php
 namespace App\Api;
 
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+
 /**
  * 脱敏数据
  *
@@ -63,7 +66,9 @@ class AuditCard extends BaseApi {
    */
   public function download() {
 
-    $result = $this->dm->download($this->retriveRuleParams(__FUNCTION__));
+    $data = $this->retriveRuleParams(__FUNCTION__);
+
+    $result = $this->dm->download($data);
 
     header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
     header('Content-Type:application/vnd.ms-excel');
@@ -104,7 +109,7 @@ class AuditCard extends BaseApi {
 
     $row = 2;
 
-    foreach($result['data'] as $index => $order) {
+    foreach($result as $index => $order) {
 
       $column = 0;
 
@@ -112,7 +117,16 @@ class AuditCard extends BaseApi {
 
       foreach($fields as $field) {
 
-        $valueOrder[$field] = $order[$field];
+        if ($field == 'state') {
+
+          $valueOrder[$field] = $order[$field] == 1 ? '核卡' : '拒绝';
+
+        } else {
+
+            $valueOrder[$field] = $order[$field];
+
+        }
+
 
       }
 

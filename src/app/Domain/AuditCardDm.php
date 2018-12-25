@@ -11,7 +11,7 @@ class AuditCardDm {
 
   public function download($data) {
 
-  	$result = \App\request('App.AuditCard.GetAll', $data);
+  	return \App\request('App.AuditCard.GetAll', $data);
 
   }
 
