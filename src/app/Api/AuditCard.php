@@ -32,7 +32,8 @@ class AuditCard extends BaseApi {
         'source' => 'source|string|false||渠道编码',
         'begin_date' => 'begin_date|string|false||开始时间',
         'end_date' => 'end_date|string|false||结束时间',
-        'bank_id' => 'bank_id|int|false||银行id'
+        'bank_id' => 'bank_id|int|false||银行id',
+        'fields' => 'fields|string|false||字段'
 
       ]
     
