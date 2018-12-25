@@ -13,7 +13,11 @@ class UploadFilesDm {
     
       'file_path' => $_FILES['upfile']['tmp_name'],
 
-      'orig_name' => $_FILES['upfile']['name']
+      'orig_name' => $_FILES['upfile']['name'],
+
+      'bus_date' => $data['bus_date'],
+
+      'channel_code' => $data['channel_code']
     
     ];
 

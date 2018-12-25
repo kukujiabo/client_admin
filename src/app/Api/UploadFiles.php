@@ -26,6 +26,8 @@ class UploadFiles extends BaseApi {
         ],
 
         'bank_id' => 'bank_id|int|true||银行id',
+        'channel_code' => 'channel_code|string|false||渠道编码',
+        'bus_date' => 'bus_date|string|true||进件日期',
         'channel_id' => 'channel_id|int|true||渠道id'
       
       ],
