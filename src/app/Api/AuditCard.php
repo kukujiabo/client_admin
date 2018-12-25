@@ -14,7 +14,7 @@ class AuditCard extends BaseApi {
     
       'getList' => [
       
-        'sequence' => 'sequence|string|false||流水号',
+        'channel_id' => 'channel_id|string|false||流水号',
         'source' => 'source|string|false||渠道',
         'bank_id' => 'bank_id|int|false||银行id',
         'order' => 'order|string|false||排序',
@@ -22,6 +22,14 @@ class AuditCard extends BaseApi {
         'page' => 'page|int|false||页码',
         'page_size' => 'page_size|int|false|50|每页条数'
       
+      ],
+
+      'download' => [
+
+        'channel_id' => 'channel_id|string|false||渠道id',
+        'source' => 'source|string|false||渠道编码',
+        'bank_id' => 'bank_id|int|false||银行id'
+
       ]
     
     
@@ -40,6 +48,89 @@ class AuditCard extends BaseApi {
   
     return $this->dm->getList($this->retriveRuleParams(__FUNCTION__));
   
+  }
+
+  /**
+   * 下载脱敏数据
+   * @desc 下载脱敏数据
+   *
+   * @return array list
+   */
+  public function download() {
+
+    $result = $this->dm->download($this->retriveRuleParams(__FUNCTION__));
+
+    header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+    header('Content-Type:application/vnd.ms-excel');
+    header('Content-Disposition: attachment;filename="脱敏数据.xlsx"');
+    header('Cache-Control: max-age=0');
+      
+    $spreadsheet = new Spreadsheet();
+
+    $titles = array(
+    
+      'source' => '渠道码', 
+      'mname' => '银行', 
+      'state' => '状态', 
+      'name' => '姓名', 
+      'phone' => '手机号', 
+      'in_date' => '进卡时间', 
+      'audit_date' => '审核时间', 
+      'created_at' => '导入时间'
+    );
+
+    $fields = explode(',', $data['fields']);
+
+    $sheet = $spreadsheet->getActiveSheet();
+
+    $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+    foreach($fields as $key => $field) {
+
+      foreach($titles as  $title) {
+
+        $sheet->setCellValue("{$characters[$key]}1", $titles[$field]);
+      
+      }
+
+    }
+
+    $sheet->getColumnDimension('A')->setWidth(30);
+
+    $row = 2;
+
+    foreach($result['data'] as $index => $order) {
+
+      $column = 0;
+
+      $valueOrder = [];
+
+      foreach($fields as $field) {
+
+        $valueOrder[$field] = $order[$field];
+
+      }
+
+      foreach($valueOrder as $value) {
+
+        $cell = "{$characters[$column]}{$row}";
+
+        $sheet->setCellValue($cell, $value);
+
+        $column++;
+
+      }
+
+      $row++;
+
+    }
+
+    $writer = new Xlsx($spreadsheet);
+
+    $writer->save("php://output");
+
+    exit;
+
   }
 
 

@@ -9,4 +9,10 @@ class AuditCardDm {
   
   }
 
+  public function download($data) {
+
+  	$result = \App\request('App.AuditCard.GetAll', $data);
+
+  }
+
 }
