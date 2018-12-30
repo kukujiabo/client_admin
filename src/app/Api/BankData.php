@@ -61,6 +61,12 @@ class BankData extends BaseApi {
         'import_num' => 'import_num|int|false|0|进件数量',
         'bus_date' => 'bus_date|string|true||进件日期'
       
+      ],
+
+      'download' => [
+
+        'id' => 'id|int|true||id'
+
       ]
     
     ]);
