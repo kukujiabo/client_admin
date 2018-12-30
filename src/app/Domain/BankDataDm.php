@@ -48,7 +48,7 @@ class BankDataDm {
 
       header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
       header('Content-Type:application/vnd.ms-excel');
-      header('Content-Disposition: attachment;filename="脱敏数据.xlsx"');
+      header('Content-Disposition: attachment;filename="' . $file['orig_name']);
       header('Cache-Control: max-age=0');
 
       echo fread ( $fileindex, filesize ( $file['file_path'] ) );
