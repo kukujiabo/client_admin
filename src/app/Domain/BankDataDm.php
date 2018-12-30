@@ -40,7 +40,7 @@ class BankDataDm {
 
     $file = $this->getDetail([ 'id' => $data['id']]);
 
-    $fileindex = fopen ( $file['path'], "rb" );
+    $fileindex = fopen ( $file['file_path'], "rb" );
 
     if ($file) {
 
