@@ -42,6 +42,8 @@ class BankDataDm {
 
     $fileindex = fopen ( $file['file_path'], "rb" );
 
+    \App\request('App.BankData.Update', [ 'id' => $data['id'], 'download' => 1 ]);
+
     if ($file) {
 
       header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
