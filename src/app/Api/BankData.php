@@ -123,7 +123,7 @@ class BankData extends BaseApi {
 
   public function download() {
 
-    $this->dm->download($this->retriveRuleParams(__FUNCTION__));
+    return $this->dm->download($this->retriveRuleParams(__FUNCTION__));
 
   }
 
