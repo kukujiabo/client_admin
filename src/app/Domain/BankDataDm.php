@@ -51,7 +51,7 @@ class BankDataDm {
       header('Content-Disposition: attachment;filename="脱敏数据.xlsx"');
       header('Cache-Control: max-age=0');
 
-      echo fread ( $fileindex, filesize ( $file['path'] ) );
+      echo fread ( $fileindex, filesize ( $file['file_path'] ) );
 
       exit;
 
