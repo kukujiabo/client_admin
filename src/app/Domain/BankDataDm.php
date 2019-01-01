@@ -59,4 +59,10 @@ class BankDataDm {
 
   }
 
+  public function remove($data) {
+
+    return \App\request('App.BankData.Remove', $data);
+
+  }
+
 }

@@ -67,6 +67,12 @@ class BankData extends BaseApi {
 
         'id' => 'id|int|true||id'
 
+      ],
+
+      'remove' => [
+
+        'id' => 'id|int|true||id'
+
       ]
     
     ]);

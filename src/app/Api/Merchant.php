@@ -78,6 +78,12 @@ class Merchant extends BaseApi {
         'page' => 'page|int|false|1|页码',
         'page_size' => 'page_size|int|false|20|每页条数'
       
+      ],
+
+      'remove' => [
+
+        'id' => 'id|int|true||对账单id'
+
       ]
     
     ]);
@@ -154,6 +160,18 @@ class Merchant extends BaseApi {
   
     return $this->dm->getDetail($this->retriveRuleParams(__FUNCTION__));
   
+  }
+
+  /**
+   * 删除对账单
+   * @desc 删除对账单
+   *
+   * @return array data
+   */
+  public function remove() {
+
+    return $this->dm->remove($this->retriveRuleParams(__FUNCTION__));
+
   }
 
 }
