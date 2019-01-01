@@ -133,4 +133,11 @@ class BankData extends BaseApi {
 
   }
 
+
+  public function remove() {
+
+    return $this->dm->remove($this->retriveRuleParams(__FUNCTION__)); 
+
+  }
+
 }
